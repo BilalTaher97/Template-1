@@ -1,0 +1,200 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: "Work Sans", sans-serif;
+
+}
+
+:root {
+
+    --Main-Color: #10cab7;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+li {
+
+    text-decoration: none;
+}
+
+ul,
+li {
+
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.header {
+
+    padding: 20px;
+}
+
+
+
+.header .container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+
+    width: 60px;
+}
+
+
+.Link {
+
+    position: relative;
+    cursor: pointer;
+}
+
+.Link:hover .icon span:nth-child(2) {
+
+    width: 100%;
+}
+
+.icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.Link:hover ul {
+
+    display: block;
+}
+
+.icon span {
+
+    background-color: #333;
+    margin-bottom: 5px;
+}
+
+.icon span:first-child {
+
+    height: 2px;
+    width: 100%;
+}
+
+.icon span:nth-child(2) {
+    height: 2px;
+    width: 60%;
+    transition: 0.3s;
+}
+
+
+.icon span:last-child {
+    height: 2px;
+    width: 100%;
+}
+
+.Link ul {
+
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 10px);
+    display: none;
+    z-index: 3;
+}
+
+.Link ul::before {
+
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -19px;
+}
+
+.Link ul li a {
+
+
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.Link ul li a:hover {
+
+
+    padding-left: 25px;
+}
+
+.Link ul li:not(:last-child) a {
+
+    border-bottom: 1px solid #DDD;
+
+
+}
+
+.Landing {
+    background-image: url("./Images/landing.jpg");
+    background-size: cover;
+    height: calc(100vh - 80px);
+    position: relative;
+}
+
+.Land-Text {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+}
+
+.Land-Text h1 {
+
+    text-align: center;
+    color: var(--Main-Color);
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.Land-Text p {
+
+    text-align: center;
+    font-size: 17px;
+}
